@@ -58,31 +58,18 @@
 </div>
 
     <script>
-        // $(document).ready(function(){
-        //     var total = 0;
-        //     $("tr #sell").each(function(){
-        //         var columValue = parseFloat($(this).val());
-        //         total += columValue
-        //     })
-        //     $("#sell_price").append('Sell Total : '+total+'  ');
-        // })
-
-        // $("#sell").mask('#,###.##', {reverse: true});
-
-        var total_amount = function(){
-            var sum = 0;
-            $("#sell").each(function(){
-                var num = $(this).val().replace(',','');
-                if(num != 0){
-                    sum += parseFloat(num)
-                }
+        $(document).ready(function(){
+            var total = 0;
+            $("tr #sell").each(function(){
+                var columValue = parseFloat($(this).val());
+                total += columValue
             })
-            $("#sell_price").append('Sell Total : '+sum+'  ');
-        }
-
-        $("#sell").keyup(function(){
-            total_amount();
+            $("#sell_price").append('Sell Total : '+total+'  ');
         })
+
+     
+
+        
     </script>
 
 
